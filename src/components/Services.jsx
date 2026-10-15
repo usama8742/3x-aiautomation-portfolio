@@ -1,21 +1,8 @@
 import React from 'react';
+import { Bot, Workflow, MessageSquareCode, Mic, Database, CheckCheck, Network, Globe, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { SERVICES } from '../data/portfolioData';
 import TiltCard from './TiltCard';
-import { 
-  Bot, 
-  Workflow, 
-  MessageSquareCode, 
-  Mic, 
-  Database, 
-  CheckCheck, 
-  Network, 
-  Globe, 
-  Sparkles, 
-  Zap, 
-  Activity,
-  ArrowRight
-} from 'lucide-react';
-
 const ICON_MAP = {
   Bot: Bot,
   Workflow: Workflow,
@@ -73,7 +60,7 @@ function ServiceMiniVisual({ type }) {
             <span className="w-1 bg-[#FE330A] h-4 rounded-full animate-pulse delay-100"></span>
             <span className="w-1 bg-[#FE330A] h-2.5 rounded-full animate-pulse"></span>
           </div>
-          <span className="text-[10px] font-mono text-emerald-700 font-bold">120ms Latency</span>
+          <span className="text-[10px] font-mono text-emerald-700 font-bold">Live</span>
         </div>
       );
     case 'crm':
@@ -163,7 +150,7 @@ export default function Services() {
                     <ServiceMiniVisual type={svc.previewType} />
                   </div>
 
-                  {/* Tags */}
+                  {/* Tags + link to the full service page */}
                   <div className="pt-4 border-t border-[#DBD6CF]">
                     <div className="flex flex-wrap gap-1.5">
                       {svc.tags.map((tag, tIdx) => (
@@ -175,6 +162,15 @@ export default function Services() {
                         </span>
                       ))}
                     </div>
+                    {svc.slug && (
+                      <Link
+                        to={`/services/${svc.slug}`}
+                        className="mt-4 inline-flex items-center gap-1.5 text-xs font-bold text-[#191919] hover:text-[#FE330A] transition-colors"
+                      >
+                        <span>Read about {svc.title}</span>
+                        <span aria-hidden="true">→</span>
+                      </Link>
+                    )}
                   </div>
 
                   {/* Bottom Indicator */}
@@ -183,6 +179,13 @@ export default function Services() {
               </TiltCard>
             );
           })}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link to="/services" className="inline-flex items-center gap-1.5 text-sm font-bold text-[#FE330A] hover:underline">
+            <span>See every service in detail</span>
+            <span aria-hidden="true">→</span>
+          </Link>
         </div>
 
       </div>

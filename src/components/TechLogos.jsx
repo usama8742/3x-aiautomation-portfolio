@@ -1,5 +1,4 @@
 import React from 'react';
-
 // Official & precision styled SVG brand icons for the technology stack
 
 export function PythonLogo({ className = "w-6 h-6" }) {

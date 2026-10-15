@@ -1,8 +1,7 @@
 import React from 'react';
+import { Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
-import { Home, ArrowLeft } from 'lucide-react';
-
 export default function NotFoundPage() {
   return (
     <>
@@ -12,14 +11,14 @@ export default function NotFoundPage() {
         canonicalUrl="/404"
       />
 
-      <div className="min-h-[80vh] bg-[#030712] text-slate-100 flex flex-col items-center justify-center pt-32 pb-20 px-4 text-center">
-        <div className="w-20 h-20 rounded-3xl bg-cyan-500/10 border border-cyan-400/30 text-cyan-400 flex items-center justify-center font-mono text-3xl font-black mb-6 shadow-glow-cyan">
+      <div className="min-h-[80vh] bg-white text-[#191919] flex flex-col items-center justify-center pt-32 pb-20 px-4 text-center">
+        <div className="w-20 h-20 rounded-3xl bg-[#FE330A]/10 border border-[#FE330A]/30 text-[#FE330A] flex items-center justify-center font-mono text-3xl font-black mb-6 shadow-glow">
           404
         </div>
-        <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight mb-4">
+        <h1 className="text-3xl sm:text-4xl font-black text-[#191919] tracking-tight mb-4">
           Page Not Found
         </h1>
-        <p className="text-slate-400 max-w-md mb-8 font-normal text-sm sm:text-base">
+        <p className="text-slate-600 max-w-md mb-8 font-normal text-sm sm:text-base">
           The page or route you requested does not exist or has been moved.
         </p>
 

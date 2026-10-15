@@ -1,29 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { 
-  Search, 
-  BookOpen, 
-  GraduationCap, 
-  Sparkles, 
-  Code2, 
-  CheckCircle2, 
-  ArrowRight, 
-  ChevronRight, 
-  Layers, 
-  Cpu, 
-  Brain, 
-  Terminal, 
-  Check, 
-  Copy, 
-  X, 
-  ExternalLink,
-  Zap,
-  TrendingUp,
-  Bookmark
-} from 'lucide-react';
-import TiltCard from './TiltCard';
+import { Search, BookOpen, GraduationCap, Sparkles, CheckCircle2, ArrowRight, Layers, Check, Copy, X } from 'lucide-react';
 import { KNOWLEDGE_CATEGORIES, KNOWLEDGE_TOPICS } from '../data/knowledgeBaseData';
 import VisualDiagramRenderer from './VisualDiagramRenderer';
-
 export default function KnowledgeHub({ onOpenContact }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -428,11 +406,11 @@ export default function KnowledgeHub({ onOpenContact }) {
                       </pre>
                     </div>
 
-                    {/* How Usama Uses This in Production */}
+                    {/* How we use this in production */}
                     <div className="p-4 rounded-2xl bg-[#EFEAE3] border border-[#DBD6CF] flex items-start gap-3">
                       <Sparkles className="w-5 h-5 text-[#FE330A] shrink-0 mt-0.5" />
                       <div className="text-xs text-slate-700">
-                        <strong className="text-[#191919] block mb-0.5">How Usama Applies This For Clients:</strong>
+                        <strong className="text-[#191919] block mb-0.5">How we apply this for clients:</strong>
                         <span>{selectedTopic.businessImpact}</span>
                       </div>
                     </div>
@@ -469,7 +447,7 @@ export default function KnowledgeHub({ onOpenContact }) {
                   }}
                   className="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#FE330A] to-[#D62705] hover:shadow-glow transition-all flex items-center justify-center gap-1.5 flex-1 sm:flex-initial"
                 >
-                  <span>Build This System With Usama</span>
+                  <span>Build This System With Us</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>

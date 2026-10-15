@@ -147,6 +147,63 @@
   transform: translateY(-2px);
 }
 
+/* Generic button aliases used by inner pages (services, industries, blog, 404) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 50px;
+  border: 2px solid #000000;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background-color: #FE330A;
+  border-color: #FE330A;
+  color: #FFFFFF;
+  box-shadow: 0 10px 25px -5px rgba(254, 51, 10, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 50px;
+  border: 2px solid #DBD6CF;
+  background-color: #FFFFFF;
+  color: #191919;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  border-color: #FE330A;
+  color: #FE330A;
+  transform: translateY(-2px);
+}
+
+/* Respect reduced-motion preferences for ambient animation */
+@media (prefers-reduced-motion: reduce) {
+  .orange-gradient-1,
+  .orange-gradient-2 {
+    animation: none;
+  }
+}
+
 /* Azzle Pill Eyebrow Badge */
 .pill-badge {
   display: inline-flex;

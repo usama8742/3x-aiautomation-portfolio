@@ -1,27 +1,6 @@
 import React, { useState } from 'react';
-import TiltCard from './TiltCard';
-import { 
-  Mail, 
-  Globe, 
-  Send, 
-  CheckCircle2, 
-  Sparkles, 
-  ArrowRight, 
-  MessageSquare, 
-  Clock,
-  Copy,
-  Check,
-  ExternalLink,
-  AlertCircle,
-  RefreshCw,
-  Inbox,
-  CheckCheck,
-  Zap
-} from 'lucide-react';
-import { GithubIcon, LinkedinIcon, InstagramIcon } from './SocialIcons';
-import InstagramWidget from './InstagramWidget';
 import confetti from 'canvas-confetti';
-
+import { Mail, Send, CheckCircle2, Sparkles, MessageSquare, ExternalLink, RefreshCw } from 'lucide-react';
 const SERVICE_OPTIONS = [
   "AI Agent",
   "AI Chatbot",
@@ -33,48 +12,19 @@ const SERVICE_OPTIONS = [
   "Other"
 ];
 
-export default function Contact({ prefillGoal = '' }) {
+export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     service: 'AI Agent',
-    automationGoal: prefillGoal || '',
+    automationGoal: "",
     message: ''
   });
 
-  React.useEffect(() => {
-    if (prefillGoal) {
-      setFormData((prev) => ({
-        ...prev,
-        automationGoal: prefillGoal,
-        service: 'Workflow Automation'
-      }));
-    }
-  }, [prefillGoal]);
-
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [copiedEmail, setCopiedEmail] = useState(false);
   const [submissionStatus, setSubmissionStatus] = useState('idle'); // 'idle' | 'success' | 'activate_needed' | 'fallback'
-
-  const copyEmail = () => {
-    navigator.clipboard.writeText("contactbyusama@gmail.com");
-    setCopiedEmail(true);
-    setTimeout(() => setCopiedEmail(false), 2000);
-  };
-
-  // 1-Click Test Demo Filler
-  const handleAutoFillTest = () => {
-    setFormData({
-      name: 'Usama Test Client',
-      email: 'contactbyusama@gmail.com',
-      company: '3X AI Automation Testing',
-      service: 'AI Agent',
-      automationGoal: 'Verify live email delivery to contactbyusama@gmail.com',
-      message: 'Hello Usama! This is a test inquiry to confirm the contact section is in 100% working condition.'
-    });
-  };
 
   const getSubject = () => {
     return `New Project Inquiry: ${formData.service || 'AI Automation'} - ${formData.name || 'Website Visitor'}`;
@@ -82,14 +32,14 @@ export default function Contact({ prefillGoal = '' }) {
 
   const getBodyText = () => {
     return (
-      `Hi Usama,\n\nI would like to discuss an AI automation project.\n\n` +
+      `Hi 3X AI Automation team,\n\nI would like to discuss an AI automation project.\n\n` +
       `Name: ${formData.name || 'Not provided'}\n` +
       `Email: ${formData.email || 'Not provided'}\n` +
       `Company: ${formData.company || 'N/A'}\n` +
       `Service Needed: ${formData.service || 'AI Agent'}\n` +
       `Automation Goal: ${formData.automationGoal || 'Not specified'}\n\n` +
       `Additional Notes:\n${formData.message || 'None'}\n\n` +
-      `Sent via 3X AI Automation Portfolio (contactbyusama@gmail.com).`
+      `Sent from the 3X AI Automation website contact form.`
     );
   };
 
@@ -175,7 +125,7 @@ export default function Contact({ prefillGoal = '' }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-12 sm:mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFEAE3] border border-[#DBD6CF] text-[#FE330A] text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Direct Client Engagement</span>
@@ -185,44 +135,16 @@ export default function Contact({ prefillGoal = '' }) {
           </h2>
           <div className="space-y-1 text-base sm:text-lg text-slate-600 font-normal">
             <p>Have an AI idea, automation project, or business process you'd like to improve?</p>
-            <p>Send me a message and let's discuss your system architecture.</p>
+            <p>Send us a message and we will reply within one business day.</p>
           </div>
         </div>
 
         {/* Contact Grid: Form on Left/Center (7 cols) + Direct Info on Right (5 cols) */}
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        <div className="max-w-4xl mx-auto">
           
           {/* Form Container (7 cols) */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 border border-[#DBD6CF] shadow-card">
+          <div className="bg-white rounded-3xl p-6 sm:p-10 border border-[#DBD6CF] shadow-card">
             
-            {/* Live Delivery Guarantee Banner */}
-            <div className="mb-6 flex flex-wrap items-center justify-between gap-3 p-3.5 rounded-2xl bg-[#EFEAE3] border border-[#DBD6CF] text-xs text-[#FE330A]">
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span className="font-semibold text-slate-800">Email Destination:</span>
-                <span className="font-mono font-bold text-[#FE330A]">contactbyusama@gmail.com</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <button
-                  type="button"
-                  onClick={handleAutoFillTest}
-                  className="text-[11px] font-bold text-slate-600 hover:text-[#FE330A] flex items-center gap-1 bg-white/80 px-2 py-0.5 rounded-md border border-[#DBD6CF]"
-                  title="Auto-fill with test data to try immediately"
-                >
-                  <Zap className="w-3 h-3 text-amber-500" />
-                  <span>Fill Test Data</span>
-                </button>
-                <button
-                  type="button"
-                  onClick={copyEmail}
-                  className="text-[11px] font-bold text-[#FE330A] hover:underline flex items-center gap-1 shrink-0"
-                >
-                  {copiedEmail ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
-                  <span>{copiedEmail ? 'Copied' : 'Copy'}</span>
-                </button>
-              </div>
-            </div>
-
             {submitted ? (
               <div className="text-center py-6 sm:py-8 space-y-6 animate-fadeIn">
                 <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center mx-auto shadow-sm">
@@ -231,10 +153,12 @@ export default function Contact({ prefillGoal = '' }) {
                 
                 <div>
                   <h3 className="text-2xl font-bold text-[#191919]">
-                    Project Request Transmitted!
+                    {submissionStatus === 'success' ? 'Message sent.' : 'One more step.'}
                   </h3>
-                  <p className="text-xs text-[#FE330A] font-mono font-semibold mt-1">
-                    Target: contactbyusama@gmail.com
+                  <p className="text-sm text-slate-600 mt-2 max-w-md mx-auto">
+                    {submissionStatus === 'success'
+                      ? 'Thanks. We read every inquiry ourselves and reply within one business day.'
+                      : 'We could not send this automatically from your browser. Use one of the buttons below to send it from your email instead.'}
                   </p>
                 </div>
 
@@ -266,16 +190,8 @@ export default function Contact({ prefillGoal = '' }) {
                   </div>
                 </div>
 
-                {/* Clear Instruction for Usama's Inbox */}
-                <div className="max-w-md mx-auto p-3.5 rounded-2xl bg-amber-50 border border-amber-200 text-left text-xs text-amber-900 flex items-start gap-2.5">
-                  <Inbox className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-                  <div>
-                    <span className="font-bold block">Where to check this email:</span>
-                    <span>Submissions go directly to <strong>contactbyusama@gmail.com</strong>. If this is your first test submission, check your <strong>Gmail Updates or Spam folder</strong> for FormSubmit's confirmation email and click "Activate Form".</span>
-                  </div>
-                </div>
-
                 {/* Direct Action Buttons */}
+                {submissionStatus !== 'success' && (
                 <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                   <a
                     href={getGmailWebLink()}
@@ -284,7 +200,7 @@ export default function Contact({ prefillGoal = '' }) {
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#FE330A] to-[#D62705] hover:shadow-glow transition-all"
                   >
                     <Mail className="w-3.5 h-3.5" />
-                    <span>Open Pre-filled Draft in Gmail Web</span>
+                    <span>Send via Gmail</span>
                     <ExternalLink className="w-3 h-3 opacity-80" />
                   </a>
 
@@ -296,6 +212,7 @@ export default function Contact({ prefillGoal = '' }) {
                     <span>Open in Mail App</span>
                   </a>
                 </div>
+                )}
 
                 <div className="pt-1">
                   <button
@@ -314,7 +231,7 @@ export default function Contact({ prefillGoal = '' }) {
                     className="text-xs font-bold text-[#FE330A] hover:underline inline-flex items-center gap-1.5"
                   >
                     <RefreshCw className="w-3 h-3" />
-                    <span>Send Another Project Request</span>
+                    <span>Send another message</span>
                   </button>
                 </div>
               </div>
@@ -372,6 +289,7 @@ export default function Contact({ prefillGoal = '' }) {
                       Service Needed <span className="text-[#FE330A]">*</span>
                     </label>
                     <select
+                      aria-label="Service needed"
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-[#DBD6CF] bg-[#EFEAE3] text-sm text-[#191919] focus:outline-none focus:border-[#FE330A] focus:bg-white focus:ring-1 focus:ring-[#FE330A] transition-colors"
@@ -463,149 +381,14 @@ export default function Contact({ prefillGoal = '' }) {
                 <div className="pt-1 text-center">
                   <p className="text-[11px] text-slate-500">
                     Need instant response? Email directly to{' '}
-                    <button
-                      type="button"
-                      onClick={copyEmail}
-                      className="font-bold text-[#FE330A] hover:underline"
-                    >
+                    <a href="mailto:contactbyusama@gmail.com" className="font-bold text-[#FE330A] hover:underline">
                       contactbyusama@gmail.com
-                    </button>
+                    </a>
                   </p>
                 </div>
 
               </form>
             )}
-          </div>
-
-          {/* Direct Contact Info & Socials (5 cols) */}
-          <div className="lg:col-span-5 space-y-6">
-            
-            {/* Direct Channels Card */}
-            <div className="bg-white rounded-3xl p-7 border border-[#DBD6CF] shadow-card space-y-6">
-              <div className="flex items-center justify-between border-b border-[#DBD6CF] pb-4">
-                <h3 className="text-xl font-bold text-[#191919]">
-                  Direct Channels
-                </h3>
-                <span className="text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-[#EFEAE3] text-[#FE330A] border border-[#DBD6CF] flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                  Verified Live
-                </span>
-              </div>
-
-              <div className="space-y-4">
-                {/* Primary Email */}
-                <div className="p-4 rounded-2xl bg-[#EFEAE3] border border-[#DBD6CF] space-y-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-9 h-9 rounded-xl bg-[#EFEAE3] text-[#FE330A] flex items-center justify-center shrink-0">
-                        <Mail className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <span className="text-[11px] text-slate-500 font-semibold block uppercase tracking-wider">
-                          Official Direct Email
-                        </span>
-                        <a 
-                          href="mailto:contactbyusama@gmail.com"
-                          className="text-sm font-bold text-[#191919] hover:text-[#FE330A] transition-colors"
-                        >
-                          contactbyusama@gmail.com
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-2 pt-1">
-                    <a
-                      href="https://mail.google.com/mail/?view=cm&fs=1&to=contactbyusama@gmail.com&su=AI%20Automation%20Inquiry"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-bold text-white bg-[#FE330A] hover:bg-[#D62705] transition-all shadow-sm"
-                    >
-                      <Mail className="w-3.5 h-3.5" />
-                      <span>Email via Gmail</span>
-                    </a>
-                    <button
-                      type="button"
-                      onClick={copyEmail}
-                      className="inline-flex items-center gap-1 py-2 px-3 rounded-lg text-xs font-bold bg-white text-[#191919] border border-[#DBD6CF] hover:border-[#FE330A] transition-all"
-                      title="Copy email address"
-                    >
-                      {copiedEmail ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
-                      <span>{copiedEmail ? 'Copied!' : 'Copy'}</span>
-                    </button>
-                  </div>
-                </div>
-
-                {/* Instagram Channel */}
-                <a 
-                  href="https://www.instagram.com/3xaiautomation/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-4 p-3.5 rounded-xl hover:bg-[#EFEAE3] border border-transparent hover:border-[#DBD6CF] transition-all group"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#f09433]/15 via-[#dc2743]/15 to-[#bc1888]/15 text-[#dc2743] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                    <InstagramIcon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs text-slate-500 font-medium block">Instagram Official</span>
-                    <span className="text-sm font-bold text-[#191919] group-hover:text-[#FE330A] transition-colors">
-                      @3xaiautomation
-                    </span>
-                  </div>
-                </a>
-
-                {/* LinkedIn */}
-                <a 
-                  href="https://www.linkedin.com/in/usama8742/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-4 p-3.5 rounded-xl hover:bg-[#EFEAE3] border border-transparent hover:border-[#DBD6CF] transition-all group"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-[#EFEAE3] text-[#FE330A] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                    <LinkedinIcon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs text-slate-500 font-medium block">LinkedIn Profile</span>
-                    <span className="text-sm font-bold text-[#191919] group-hover:text-[#FE330A] transition-colors">
-                      linkedin.com/in/usama8742
-                    </span>
-                  </div>
-                </a>
-
-                {/* GitHub */}
-                <a 
-                  href="https://github.com/usama8742"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-4 p-3.5 rounded-xl hover:bg-[#EFEAE3] border border-transparent hover:border-[#DBD6CF] transition-all group"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                    <GithubIcon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs text-slate-500 font-medium block">GitHub Repositories</span>
-                    <span className="text-sm font-bold text-[#191919] group-hover:text-[#FE330A] transition-colors">
-                      github.com/usama8742
-                    </span>
-                  </div>
-                </a>
-
-              </div>
-
-              {/* SLA Guarantee Box */}
-              <div className="pt-4 border-t border-[#DBD6CF]/70">
-                <div className="flex items-center gap-3 text-xs text-slate-600 bg-[#EFEAE3] p-3 rounded-xl border border-[#DBD6CF]/60">
-                  <Clock className="w-4 h-4 text-[#FE330A] shrink-0" />
-                  <span>
-                    <strong>Response Guarantee:</strong> Inquiries replied to within <strong>24 business hours</strong>.
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Embedded Instagram Feed Widget */}
-            <InstagramWidget />
-
           </div>
 
         </div>

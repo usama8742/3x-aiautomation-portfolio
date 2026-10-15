@@ -1,22 +1,44 @@
-export const BRAND = {
-  name: "Usama Younas",
-  title: "AI Engineer",
-  specialization: "AI Automation & Intelligent Systems",
-  business: "3X AI Automation",
-  tagline: "I build AI systems that automate real business operations.",
-  email: "contactbyusama@gmail.com",
-  github: "https://github.com/usama8742",
-  linkedin: "https://www.linkedin.com/in/usama8742/",
-  instagram: "https://www.instagram.com/3xaiautomation/",
-  portfolioUrl: "https://usama-ai-portfolio.vercel.app/",
-  location: "Available for Global Remote & Contract Projects",
-  status: "Open for AI Automation & Engineering Projects",
-  techLine: "Multi-Agent Systems · LangGraph · LLMs · FastAPI · React & Next.js · n8n Automation"
-};
+// People behind 3X AI Automation. `photo` is optional; the Team section
+// falls back to an initials avatar when it is missing or fails to load.
+export const TEAM = [
+  {
+    id: "usama",
+    name: "Usama Younas",
+    role: "Founder · AI Engineer",
+    initials: "UY",
+    photo: "/profile-photo.webp",
+    location: "Remote · Pakistan / UAE",
+    bio: "Founded 3X AI Automation to replace manual busywork with production AI systems. Leads solution architecture and client delivery from the first scoping call to handover: maps the business process, decides what should be automated and what should stay human, and designs the system around that. Has built AI agents and chatbots that qualify and route leads, voice assistants that take calls and book appointments, and n8n pipelines that keep CRMs, calendars and messaging channels in sync for clients across real estate, healthcare and SaaS.",
+    focus: ["AI Agents & Chatbots (OpenAI · LangGraph)", "Voice Automation (Twilio · Whisper)", "Workflow Pipelines (n8n · Webhooks)", "CRM & Lead Systems (HubSpot · Supabase)"],
+    stack: "Python · n8n · LangGraph · React",
+    links: {
+      github: "https://github.com/usama8742",
+      linkedin: "https://www.linkedin.com/in/usama8742/",
+      email: "contactbyusama@gmail.com",
+    },
+  },
+  {
+    id: "haseeb",
+    name: "Haseeb Tariq",
+    role: "AI & Automation Engineer",
+    initials: "HT",
+    photo: "/team/haseeb.webp",
+    location: "Remote · Pakistan",
+    bio: "Engineers the systems end to end: designs the architecture, builds the backend and frontend, wires in the AI and automation, and runs it in production. Has shipped internal platforms used daily by whole teams, autonomous agents that read, classify and act on work without supervision, voice and chat intake that answers customers around the clock, and automation pipelines that handle tens of thousands of records with human review built in where it matters.",
+    focus: ["LLM Orchestration (LangChain / LangGraph)", "Full-Stack Platforms (Next.js · FastAPI)", "Browser & Workflow Automation", "Voice AI (ElevenLabs · Twilio)"],
+    stack: "TypeScript · Python · FastAPI · Next.js · Supabase",
+    links: {
+      github: "https://github.com/haseeb9933",
+      linkedin: "https://www.linkedin.com/in/haseeb-tariq099",
+      email: "contactbyhaseeb@gmail.com",
+    },
+  },
+];
 
 export const SERVICES = [
   {
     id: "ai-agents",
+    slug: "ai-agents",
     num: "01",
     title: "AI Agents",
     description: "Intelligent AI agents that can understand requests, make decisions, use tools, retrieve information, and complete business tasks.",
@@ -26,6 +48,7 @@ export const SERVICES = [
   },
   {
     id: "workflow-automation",
+    slug: "n8n-automation",
     num: "02",
     title: "Workflow Automation",
     description: "Automate repetitive processes using AI, n8n, APIs, webhooks, and business applications.",
@@ -35,6 +58,7 @@ export const SERVICES = [
   },
   {
     id: "ai-chatbots",
+    slug: "ai-chatbots",
     num: "03",
     title: "AI Chatbots",
     description: "Website and WhatsApp AI assistants that answer questions, qualify leads, collect information, and guide customers.",
@@ -44,6 +68,7 @@ export const SERVICES = [
   },
   {
     id: "ai-voice-agents",
+    slug: "ai-voice-agents",
     num: "04",
     title: "AI Voice Agents",
     description: "AI-powered voice systems for handling calls, answering questions, qualifying leads, and booking appointments.",
@@ -53,6 +78,7 @@ export const SERVICES = [
   },
   {
     id: "crm-automation",
+    slug: "crm-automation",
     num: "05",
     title: "CRM Automation",
     description: "Connect leads, customers, sales pipelines, follow-ups, and internal workflows into automated systems.",
@@ -62,6 +88,7 @@ export const SERVICES = [
   },
   {
     id: "lead-generation-qualification",
+    slug: "lead-generation",
     num: "06",
     title: "Lead Generation & Qualification",
     description: "Capture leads, analyze them with AI, assign lead scores, and automatically route them to the right workflow.",
@@ -71,6 +98,7 @@ export const SERVICES = [
   },
   {
     id: "api-system-integration",
+    slug: "api-integrations",
     num: "07",
     title: "API & System Integration",
     description: "Connect websites, CRMs, databases, AI models, communication platforms, and other business tools.",
@@ -80,6 +108,7 @@ export const SERVICES = [
   },
   {
     id: "ai-powered-websites",
+    slug: "web-design",
     num: "08",
     title: "AI-Powered Websites",
     description: "Modern websites enhanced with AI chatbots, appointment booking, lead capture, personalization, and automated workflows.",
@@ -97,7 +126,7 @@ export const PROJECTS = [
     category: "Full-Stack CRM & Intelligent Lead System",
     description: "Full-stack CRM designed for managing leads, properties, contacts, deals, and sales workflows.",
     technology: "React · Node.js · Express · Supabase · REST APIs",
-    image: "/images/project-real-estate-crm.jpg",
+    image: "/images/project-real-estate-crm.webp",
     techStack: ["React", "Node.js", "Express", "Supabase", "REST APIs", "PostgreSQL"],
     architecture: {
       inbound: "Inbound Leads & Property Inquiries",
@@ -105,7 +134,6 @@ export const PROJECTS = [
       features: ["Role-based authentication", "Lead & Property tracking", "Deal pipeline stages", "Automated status updates"],
       output: "Real-time Broker Dashboard & Client Portal"
     },
-    liveUrl: "https://github.com/usama8742"
   },
   {
     id: "ai-lead-qualification",
@@ -114,7 +142,7 @@ export const PROJECTS = [
     category: "Autonomous Lead Scoring Pipeline",
     description: "AI-powered lead processing system that analyzes incoming leads, assigns qualification scores, and routes them through automated workflows.",
     technology: "n8n · AI · Ollama · JavaScript · Supabase",
-    image: "/images/project-lead-qualification.jpg",
+    image: "/images/project-lead-qualification.webp",
     techStack: ["n8n", "AI Models", "Ollama", "JavaScript", "Supabase", "Webhooks"],
     architecture: {
       inbound: "Webform & Ad Inbound Webhooks",
@@ -122,7 +150,6 @@ export const PROJECTS = [
       features: ["Custom qualification scoring matrix", "Disqualification filtering", "Instant CRM sync", "High-priority SMS alerts"],
       output: "Qualified Leads routed to Top Closers within 45 seconds"
     },
-    liveUrl: "https://github.com/usama8742"
   },
   {
     id: "ai-business-automation",
@@ -131,7 +158,7 @@ export const PROJECTS = [
     category: "Enterprise System Orchestration",
     description: "Intelligent workflows that connect AI models, business applications, APIs, databases, and communication platforms.",
     technology: "n8n · APIs · Webhooks · AI Agents",
-    image: "/images/project-business-automation.jpg",
+    image: "/images/project-business-automation.webp",
     techStack: ["n8n", "APIs", "Webhooks", "AI Agents", "Python", "Cloud Integrations"],
     architecture: {
       inbound: "Cross-platform triggers (Email, Web, Forms)",
@@ -139,7 +166,6 @@ export const PROJECTS = [
       features: ["Dynamic tool calling", "Document parsing", "Cross-system synchronization", "Automated Slack & CRM notifications"],
       output: "Zero manual data-entry business backend"
     },
-    liveUrl: "https://github.com/usama8742"
   },
   {
     id: "ai-powered-chatbot",
@@ -148,7 +174,7 @@ export const PROJECTS = [
     category: "Conversational Intelligence & Lead Capture",
     description: "Conversational AI system designed to answer customer questions, capture leads, and connect conversations to business workflows.",
     technology: "Python · Flask / FastAPI · Ollama · WebSockets · Embeddings",
-    image: "/images/project-chatbot.jpg",
+    image: "/images/project-chatbot.webp",
     techStack: ["Python", "FastAPI", "Ollama", "Embeddings", "WebSockets", "CRM Webhooks"],
     architecture: {
       inbound: "Live Customer Inquiries (Web & WhatsApp)",
@@ -156,7 +182,6 @@ export const PROJECTS = [
       features: ["Semantic search", "Instant lead detail extraction", "Contextual memory", "Seamless CRM update"],
       output: "24/7 autonomous client engagement with zero hallucination"
     },
-    liveUrl: "https://github.com/usama8742"
   },
   {
     id: "ai-voice-agent",
@@ -165,7 +190,7 @@ export const PROJECTS = [
     category: "Speech AI & Voice Appointment Booking",
     description: "Voice-based AI assistant designed to handle customer conversations and automate repetitive call-based tasks.",
     technology: "Python · Whisper STT · Kokoro TTS · n8n · Calendar API",
-    image: "/images/project-voice-agent.jpg",
+    image: "/images/project-voice-agent.webp",
     techStack: ["Python", "Whisper", "Kokoro TTS", "n8n", "Calendar API", "Twilio / Telephony"],
     architecture: {
       inbound: "Inbound Phone Calls & Voice Requests",
@@ -173,7 +198,6 @@ export const PROJECTS = [
       features: ["Human-like response latency", "Dynamic calendar slot lookup", "Automated appointment confirmation", "CRM call logging"],
       output: "Confirmed booked meetings synced directly to Google Calendar"
     },
-    liveUrl: "https://github.com/usama8742"
   },
   {
     id: "data-automation-system",
@@ -182,7 +206,7 @@ export const PROJECTS = [
     category: "Automated Data Processing & Extraction",
     description: "Automated data collection and processing system designed to reduce manual research and repetitive data operations.",
     technology: "Python · Playwright · REST APIs · PostgreSQL · Automation Scripts",
-    image: "/images/project-data-automation.jpg",
+    image: "/images/project-data-automation.webp",
     techStack: ["Python", "Playwright", "PostgreSQL", "REST APIs", "Automated Cron Workers"],
     architecture: {
       inbound: "Scheduled multi-source data targets",
@@ -190,7 +214,6 @@ export const PROJECTS = [
       features: ["Automated deduplication", "Schema validation", "Error recovery", "Export to database & analytics feeds"],
       output: "Continuous structured data feeds with zero human intervention"
     },
-    liveUrl: "https://github.com/usama8742"
   }
 ];
 
@@ -245,26 +268,29 @@ export const TECH_STACK = {
 export const INDUSTRIES = [
   {
     title: "Real Estate",
+    slug: "real-estate",
     description: "Lead qualification, property matching, CRM automation, follow-ups and appointment systems.",
     icon: "Building2",
     tag: "High ROI",
-    image: "/images/industry-real-estate.jpg",
+    image: "/images/industry-real-estate.webp",
     features: ["Automated Zillow/Web Form Ingestion", "Instant Buyer Budget Qualification", "Broker Calendar Slot Booking"]
   },
   {
     title: "Healthcare & Dental",
+    slug: "healthcare",
     description: "AI chatbots, appointment booking, patient inquiries and automated reminders.",
     icon: "Stethoscope",
     tag: "24/7 Patient Intake",
-    image: "/images/industry-healthcare.jpg",
+    image: "/images/industry-healthcare.webp",
     features: ["HIPAA-Conscious Patient Triage", "Automated SMS/WhatsApp Confirmations", "Zero-Wait Emergency Desk Routing"]
   },
   {
     title: "Law Firms",
+    slug: "law-firms",
     description: "Lead capture, consultation booking, document workflows and client communication.",
     icon: "Scale",
     tag: "Case Routing",
-    image: "/images/industry-law-firm.jpg",
+    image: "/images/industry-law-firm.webp",
     features: ["Conflict-Free Consultation Booking", "Automated Intake Questionnaires", "Direct Legal CRM Pipeline Sync"]
   },
   {
@@ -272,15 +298,16 @@ export const INDUSTRIES = [
     description: "Student inquiries, admissions automation, appointment scheduling and follow-ups.",
     icon: "GraduationCap",
     tag: "Fast Admissions",
-    image: "/images/industry-education.jpg",
+    image: "/images/industry-education.webp",
     features: ["24/7 Student Query Chatbot", "Admissions Tour Calendar Lock", "Document & Transcript Ingestion"]
   },
   {
     title: "Marketing Agencies",
+    slug: "marketing-agencies",
     description: "Lead management, client workflows, reporting and internal automation.",
     icon: "Megaphone",
     tag: "Client Ops",
-    image: "/images/industry-marketing.jpg",
+    image: "/images/industry-marketing.webp",
     features: ["Cross-Platform Campaign Ingestion", "Automated Weekly Performance Reports", "Slack & Client Alert Dispatches"]
   },
   {
@@ -288,7 +315,7 @@ export const INDUSTRIES = [
     description: "Data workflows, internal automation, lead processing and system integrations.",
     icon: "Factory",
     tag: "ERP Sync",
-    image: "/images/industry-manufacturing.jpg",
+    image: "/images/industry-manufacturing.webp",
     features: ["Supply Chain Event Webhooks", "Automated Inventory Alert Pipelines", "Legacy ERP & Modern API Bridge"]
   }
 ];
@@ -326,25 +353,3 @@ export const PROCESS_STEPS = [
   }
 ];
 
-export const WHY_WORK_WITH_ME = [
-  {
-    title: "Business First",
-    description: "I focus on the problem before choosing the technology.",
-    icon: "Briefcase"
-  },
-  {
-    title: "Custom Built",
-    description: "Every workflow can be designed around your existing process and tools.",
-    icon: "Sliders"
-  },
-  {
-    title: "Connected Systems",
-    description: "AI becomes much more useful when it can communicate with your CRM, database, website and other platforms.",
-    icon: "Network"
-  },
-  {
-    title: "Built to Scale",
-    description: "Solutions are designed so they can evolve as your business grows.",
-    icon: "TrendingUp"
-  }
-];

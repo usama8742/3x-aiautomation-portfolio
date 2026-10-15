@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-
 const SITE_URL = 'https://usama-ai-portfolio.vercel.app';
 const SITE_NAME = '3X AI Automation';
 
@@ -8,7 +7,7 @@ export default function SEOHead({
   description,
   keywords,
   canonicalUrl,
-  ogImage = '/hero.png',
+  ogImage = '/og-image.png',
   schemaData = null,
 }) {
   useEffect(() => {

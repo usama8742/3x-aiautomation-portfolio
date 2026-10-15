@@ -29,8 +29,24 @@ export const HOMEPAGE_SEO = {
         "logo": "https://usama-ai-portfolio.vercel.app/3x-logo.svg",
         "founder": {
           "@type": "Person",
-          "name": "Usama Younas"
+          "name": "Usama Younas",
+          "jobTitle": "Founder & AI Engineer",
+          "sameAs": ["https://github.com/usama8742", "https://www.linkedin.com/in/usama8742/"]
         },
+        "employee": [
+          {
+            "@type": "Person",
+            "name": "Usama Younas",
+            "jobTitle": "Founder & AI Engineer",
+            "sameAs": ["https://github.com/usama8742", "https://www.linkedin.com/in/usama8742/"]
+          },
+          {
+            "@type": "Person",
+            "name": "Haseeb Tariq",
+            "jobTitle": "AI & Automation Engineer",
+            "sameAs": ["https://github.com/haseeb9933", "https://www.linkedin.com/in/haseeb-tariq099"]
+          }
+        ],
         "contactPoint": {
           "@type": "ContactPoint",
           "email": "contactbyusama@gmail.com",
@@ -630,7 +646,7 @@ export const BLOG_ARTICLES = [
     h1: "What Is AI Automation for Small Businesses?",
     date: "October 2026",
     category: "Business Strategy",
-    readTime: "5 min read",
+    readTime: "1 min read",
     keywords: "AI automation small business, business process automation, small business AI workflows",
     excerpt: "AI automation is no longer exclusive to tech conglomerates. Today, small and medium-sized businesses use AI agents, n8n pipelines, and conversational bots to operate with enterprise-grade speed and efficiency.",
     contentSections: [
@@ -655,7 +671,7 @@ export const BLOG_ARTICLES = [
     h1: "10 Essential Business Processes You Can Automate With AI Right Now",
     date: "October 2026",
     category: "Implementation",
-    readTime: "7 min read",
+    readTime: "1 min read",
     keywords: "business processes to automate, AI business automation ideas, n8n workflow examples",
     excerpt: "Looking for actionable ways to streamline your company? Here are 10 real-world business processes you can automate today using AI models and workflow engines.",
     contentSections: [
@@ -708,7 +724,7 @@ export const BLOG_ARTICLES = [
     h1: "n8n vs Zapier: Which Automation Platform Is Right for Your Business?",
     date: "October 2026",
     category: "Tech Comparison",
-    readTime: "6 min read",
+    readTime: "1 min read",
     keywords: "n8n vs zapier, n8n automation advantages, self hosted workflow automation",
     excerpt: "Choosing between Zapier and n8n can make a huge difference in your business automation budget, custom code flexibility, and data privacy compliance.",
     contentSections: [
@@ -733,7 +749,7 @@ export const BLOG_ARTICLES = [
     h1: "How AI Chatbots Generate & Qualify High-Intent Leads 24/7",
     date: "October 2026",
     category: "Lead Generation",
-    readTime: "5 min read",
+    readTime: "1 min read",
     keywords: "AI chatbot lead generation, conversational AI leads, WhatsApp lead bot",
     excerpt: "Static website forms are converting fewer visitors every year. Learn how conversational AI chatbots engage prospects in natural dialogue and turn passive traffic into qualified sales appointments.",
     contentSections: [
@@ -758,7 +774,7 @@ export const BLOG_ARTICLES = [
     h1: "How Real Estate Companies Use AI Automation to Scale Property Sales",
     date: "October 2026",
     category: "Industry Deep Dive",
-    readTime: "6 min read",
+    readTime: "1 min read",
     keywords: "real estate AI automation, real estate lead response, property CRM automation",
     excerpt: "In real estate, speed-to-lead is everything. The first broker to respond to a buyer inquiry gets the viewing 70% of the time. Here is how top real estate teams automate lead response.",
     contentSections: [
@@ -783,7 +799,7 @@ export const BLOG_ARTICLES = [
     h1: "How AI Voice Agents Automate Phone Calls & Appointment Booking",
     date: "October 2026",
     category: "Voice AI",
-    readTime: "5 min read",
+    readTime: "1 min read",
     keywords: "AI voice agents, phone booking automation, voice AI assistant",
     excerpt: "Voice AI has evolved far beyond frustrating press 1 for sales IVR menus. Today's neural voice agents conduct human-like conversations and book meetings live on the phone.",
     contentSections: [
@@ -804,7 +820,7 @@ export const BLOG_ARTICLES = [
     h1: "How to Automate Lead Follow-Ups With AI & n8n",
     date: "October 2026",
     category: "Workflow Automation",
-    readTime: "5 min read",
+    readTime: "1 min read",
     keywords: "automate lead followups, n8n lead sequence, multi channel lead automation",
     excerpt: "80% of sales require 5 follow-up attempts, yet 44% of salespeople give up after 1 touchpoint. Automated AI follow-up sequences ensure no lead falls through the cracks.",
     contentSections: [
@@ -825,7 +841,7 @@ export const BLOG_ARTICLES = [
     h1: "AI Automation for Dental Clinics: Streamlining Patient Intake & Appointments",
     date: "October 2026",
     category: "Healthcare Automation",
-    readTime: "5 min read",
+    readTime: "1 min read",
     keywords: "dental clinic automation, medical clinic AI, patient intake automation",
     excerpt: "Dental and medical clinic receptionists are often overwhelmed with phone calls and appointment management. AI automation streamlines patient intake and drastically cuts front-desk stress.",
     contentSections: [
@@ -846,7 +862,7 @@ export const BLOG_ARTICLES = [
     h1: "CRM Automation for Real Estate Businesses: Complete Implementation Guide",
     date: "October 2026",
     category: "CRM & Pipelines",
-    readTime: "6 min read",
+    readTime: "1 min read",
     keywords: "real estate CRM automation, GoHighLevel real estate, HubSpot real estate workflow",
     excerpt: "Without CRM automation, real estate brokers spend up to 40% of their workday manually typing lead details and copy-pasting client notes. Here is the step-by-step fix.",
     contentSections: [

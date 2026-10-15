@@ -1,7 +1,11 @@
 import React from 'react';
+import { Sparkles } from 'lucide-react';
 import { PROCESS_STEPS } from '../data/portfolioData';
 import TiltCard from './TiltCard';
-import { Sparkles, ArrowRight, CheckCircle2 } from 'lucide-react';
+
+
+
+
 
 export default function Process() {
   return (

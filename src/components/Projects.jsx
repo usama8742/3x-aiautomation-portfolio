@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
+import { ArrowRight, Sparkles, Maximize2 } from 'lucide-react';
 import { PROJECTS } from '../data/portfolioData';
 import ProjectModal from './ProjectModal';
 import TiltCard from './TiltCard';
-import { ArrowRight, Layers, Sparkles, ExternalLink, Maximize2 } from 'lucide-react';
-
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -18,7 +17,7 @@ export default function Projects() {
             <span>Production Systems Portfolio</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#191919] dark:text-white tracking-tight leading-tight mb-4">
-            Things I've <span className="text-[#FE330A] dark:text-cyan-400">Built</span>
+            Systems We've <span className="text-[#FE330A] dark:text-cyan-400">Shipped</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-normal">
             Real full-stack platforms, autonomous agent systems, n8n automations, and speech pipelines engineered for businesses.

@@ -1,5 +1,4 @@
 import React from 'react';
-
 export default function AuroraGlow({ className = '' }) {
   return (
     <div className={`absolute inset-0 overflow-hidden pointer-events-none -z-10 ${className}`}>
