@@ -1,51 +1,5 @@
 import React, { useState } from 'react';
-import { 
-  Sparkles, 
-  Terminal, 
-  Cpu, 
-  Workflow, 
-  Server, 
-  Layout, 
-  Database, 
-  Wrench,
-  CheckCircle2,
-  Code2,
-  ArrowRight,
-  Zap,
-  Layers,
-  Copy,
-  Check,
-  Maximize2,
-  ShieldCheck,
-  Bot,
-  Brain,
-  Network,
-  Cloud,
-  Globe,
-  Radio,
-  FileCode2,
-  Boxes,
-  Compass
-} from 'lucide-react';
-import {
-  PythonLogo,
-  N8nLogo,
-  ReactLogo,
-  SupabaseLogo,
-  PostgreSQLLogo,
-  FastAPILogo,
-  NodeLogo,
-  OllamaLogo,
-  AgentBrainLogo,
-  WebhooksLogo,
-  CRMLogo,
-  GitLogo,
-  AuthLogo,
-  ApiLogo,
-  JavaScriptLogo,
-  HtmlCssLogo
-} from './TechLogos';
-
+import { Sparkles, Cpu, Workflow, Server, Layout, Layers, Copy, Check, ShieldCheck, Brain } from 'lucide-react';
 export const DOMAIN_STACKS = [
   {
     id: "ai-agents",
@@ -156,7 +110,7 @@ export const DOMAIN_STACKS = [
         role: "Ultra-Low Latency Conversational Voice & Speech Synthesis",
         level: "Specialist",
         highlight: true,
-        snippet: `import { ElevenLabsClient } from "elevenlabs";\nconst client = new ElevenLabsClient();\n\nconst audioStream = await client.textToSpeech.convertAsStream("voice_id", {\n  text: "Hello Usama, your appointment is confirmed for 2:00 PM tomorrow.",\n  model_id: "eleven_turbo_v2_5"\n});`
+        snippet: `\nconst client = new ElevenLabsClient();\n\nconst audioStream = await client.textToSpeech.convertAsStream("voice_id", {\n  text: "Hello Usama, your appointment is confirmed for 2:00 PM tomorrow.",\n  model_id: "eleven_turbo_v2_5"\n});`
       }
     ]
   },
@@ -566,7 +520,7 @@ export default function TechStack() {
 
             <div className="p-4 overflow-auto flex-1">
               <img 
-                src="/images/master-architecture.jpg" 
+                src="/images/master-architecture.webp" 
                 alt="Full Master Architecture Blueprint" 
                 className="w-full h-auto rounded-xl object-contain"
               />

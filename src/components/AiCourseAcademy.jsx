@@ -1,27 +1,7 @@
 import React, { useState } from 'react';
-import { 
-  GraduationCap, 
-  BookOpen, 
-  CheckCircle2, 
-  Code2, 
-  Sparkles, 
-  ArrowRight, 
-  Clock, 
-  Copy, 
-  Check, 
-  ChevronDown, 
-  ChevronRight, 
-  Lightbulb, 
-  Play, 
-  FileText, 
-  Compass, 
-  Award,
-  Layers,
-  Zap
-} from 'lucide-react';
+import { GraduationCap, CheckCircle2, ArrowRight, Copy, Check, Lightbulb, Play, Award } from 'lucide-react';
 import { FULL_COURSE_MODULES } from '../data/aiCourseData';
 import VisualDiagramRenderer from './VisualDiagramRenderer';
-
 export default function AiCourseAcademy({ onOpenContact }) {
   const [activeModuleIndex, setActiveModuleIndex] = useState(0);
   const [activeLessonIndex, setActiveLessonIndex] = useState(0);
@@ -289,7 +269,7 @@ export default function AiCourseAcademy({ onOpenContact }) {
             {/* Bottom Action Footer */}
             <div className="pt-4 border-t border-[#DBD6CF] flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="text-xs text-slate-600 text-center sm:text-left">
-                Want Usama to build a custom system based on <strong>{activeModule.title}</strong>?
+                Want us to build a custom system based on <strong>{activeModule.title}</strong>?
               </div>
 
               <button

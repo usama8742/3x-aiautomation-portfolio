@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-
 export default function CountUp({
   end,
   start = 0,

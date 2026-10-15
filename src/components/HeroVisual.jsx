@@ -1,18 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Globe, 
-  Bot, 
-  CheckCircle2, 
-  Database, 
-  Send, 
-  Calendar, 
-  Play, 
-  Pause, 
-  Sparkles,
-  Zap,
-  ArrowRight
-} from 'lucide-react';
-
+import { Globe, Bot, CheckCircle2, Database, Send, Calendar, Play, Pause, Sparkles, Zap, ArrowRight } from 'lucide-react';
 const NODES = [
   {
     id: 1,
@@ -161,10 +148,10 @@ export default function HeroVisual() {
                   </span>
                 </div>
 
-                <h4 className="text-xs sm:text-sm font-bold text-[#191919] group-hover:text-[#FE330A] transition-colors leading-tight">
+                <h3 className="text-xs sm:text-sm font-bold text-[#191919] group-hover:text-[#FE330A] transition-colors leading-tight">
                   {node.label}
-                </h4>
-                <p className="text-[11px] text-slate-500 mt-0.5 leading-snug line-clamp-1">
+                </h3>
+                <p className="text-[11px] text-slate-600 mt-0.5 leading-snug line-clamp-1">
                   {node.sub}
                 </p>
 

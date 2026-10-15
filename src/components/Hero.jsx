@@ -1,21 +1,7 @@
 import React from 'react';
+import { ArrowRight, Sparkles, ShieldCheck, Clock, Lock } from 'lucide-react';
 import HeroVisual from './HeroVisual';
 import TiltCard from './TiltCard';
-import { 
-  ArrowRight, 
-  Bot, 
-  Cpu, 
-  Sparkles, 
-  ShieldCheck, 
-  Clock, 
-  Lock, 
-  CheckCircle2, 
-  TrendingUp, 
-  Scan, 
-  PhoneCall, 
-  Zap 
-} from 'lucide-react';
-
 export default function Hero({ onOpenContact }) {
   const scrollTo = (id) => {
     const el = document.getElementById(id);
@@ -45,7 +31,7 @@ export default function Hero({ onOpenContact }) {
               {/* Top Eyebrow Badge (Azzle Pill Style) */}
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-[50px] bg-white border border-[#DBD6CF] text-[#191919] text-xs font-bold uppercase tracking-wider mb-5 shadow-sm">
                 <Sparkles className="w-3.5 h-3.5 text-[#FE330A] fill-current" />
-                <span>✦ AI Engineer &amp; Automation Architect · 3X AI Automation</span>
+                <span>✦ AI &amp; Automation Engineering Studio · 3X AI Automation</span>
               </div>
 
               {/* Main Headline with High-Impact Azzle Typography */}
@@ -77,16 +63,6 @@ export default function Hero({ onOpenContact }) {
                   <ArrowRight className="w-4 h-4" />
                 </button>
 
-                {/* ROI Calculator Button */}
-                <button
-                  type="button"
-                  onClick={() => scrollTo('roi-calculator')}
-                  className="btn-azzle-secondary"
-                >
-                  <TrendingUp className="w-4 h-4 text-[#FE330A]" />
-                  <span>Calculate Your ROI</span>
-                </button>
-
                 {/* Projects Button */}
                 <button
                   type="button"
@@ -103,25 +79,25 @@ export default function Hero({ onOpenContact }) {
               {/* Proven Performance Metrics Bar */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full mb-8">
                 <div className="p-4 rounded-2xl bg-white border border-[#DBD6CF] shadow-sm">
-                  <div className="text-2xl sm:text-3xl font-black text-[#FE330A]">20+ hrs</div>
-                  <div className="text-xs font-bold text-[#555555] mt-0.5">Saved / Wk / Team</div>
+                  <div className="text-2xl sm:text-3xl font-black text-[#FE330A]">2</div>
+                  <div className="text-xs font-bold text-[#555555] mt-0.5">Engineers, No Middlemen</div>
                 </div>
 
                 <div className="p-4 rounded-2xl bg-white border border-[#DBD6CF] shadow-sm">
                   <div className="text-2xl sm:text-3xl font-black text-[#191919] flex items-center gap-1">
-                    <span>&lt; 45 Days</span>
+                    <span>24/7</span>
                   </div>
-                  <div className="text-xs font-bold text-[#555555] mt-0.5">Average Payback</div>
+                  <div className="text-xs font-bold text-[#555555] mt-0.5">Voice, Chat &amp; SMS Agents</div>
                 </div>
 
                 <div className="p-4 rounded-2xl bg-white border border-[#DBD6CF] shadow-sm">
-                  <div className="text-2xl sm:text-3xl font-black text-[#191919]">99.4%</div>
-                  <div className="text-xs font-bold text-[#555555] mt-0.5">OCR Accuracy</div>
+                  <div className="text-2xl sm:text-3xl font-black text-[#191919]">100%</div>
+                  <div className="text-xs font-bold text-[#555555] mt-0.5">Custom Built, You Own It</div>
                 </div>
 
                 <div className="p-4 rounded-2xl bg-white border border-[#DBD6CF] shadow-sm">
-                  <div className="text-2xl sm:text-3xl font-black text-[#FE330A]">24/7/365</div>
-                  <div className="text-xs font-bold text-[#555555] mt-0.5">Voice &amp; SMS Agents</div>
+                  <div className="text-2xl sm:text-3xl font-black text-[#FE330A]">1 Day</div>
+                  <div className="text-xs font-bold text-[#555555] mt-0.5">Reply To Every Inquiry</div>
                 </div>
               </div>
 
@@ -129,7 +105,7 @@ export default function Hero({ onOpenContact }) {
               <div className="flex flex-wrap items-center gap-2.5 text-xs text-[#191919] font-medium">
                 <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-[50px] bg-white border border-[#DBD6CF] shadow-sm">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>Production Reliability SLA</span>
+                  <span>Human Review Built In</span>
                 </span>
                 <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-[50px] bg-white border border-[#DBD6CF] shadow-sm">
                   <Lock className="w-3.5 h-3.5 text-[#FE330A]" />
@@ -137,7 +113,7 @@ export default function Hero({ onOpenContact }) {
                 </span>
                 <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-[50px] bg-white border border-[#DBD6CF] shadow-sm">
                   <Clock className="w-3.5 h-3.5 text-[#FE330A]" />
-                  <span>24h Rapid Intake Turnaround</span>
+                  <span>Scoped &amp; Built In-House</span>
                 </span>
               </div>
 

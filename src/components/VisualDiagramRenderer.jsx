@@ -1,24 +1,5 @@
 import React from 'react';
-import { 
-  Brain, 
-  Database, 
-  Workflow, 
-  ShieldCheck, 
-  Cpu, 
-  ArrowRight, 
-  CheckCircle2, 
-  Layers, 
-  Sparkles, 
-  Zap, 
-  FileText, 
-  UserCheck, 
-  RefreshCw,
-  Server,
-  Globe,
-  Binary,
-  Code2
-} from 'lucide-react';
-
+import { Brain, Database, Workflow, ShieldCheck, CheckCircle2, UserCheck, RefreshCw, Server, Globe, Binary } from 'lucide-react';
 export default function VisualDiagramRenderer({ diagramType, title }) {
   switch (diagramType) {
     // 1. NEURAL NETWORK & MACHINE LEARNING PIPELINE DIAGRAM

@@ -1,20 +1,6 @@
 import React, { useState } from 'react';
-import { 
-  Database, 
-  Brain, 
-  ShieldCheck, 
-  Workflow, 
-  Sparkles, 
-  ArrowRight, 
-  CheckCircle2, 
-  HelpCircle, 
-  Lightbulb, 
-  Layers, 
-  Check 
-} from 'lucide-react';
-import TiltCard from './TiltCard';
+import { Database, Brain, ShieldCheck, Workflow, Sparkles, ArrowRight, CheckCircle2, Lightbulb, Layers } from 'lucide-react';
 import { AI_PLATFORM_PILLARS } from '../data/aiCourseData';
-
 const ICON_MAP = {
   Database: Database,
   Brain: Brain,
@@ -151,7 +137,7 @@ export default function AiPlatformPillars({ onOpenContact }) {
                 {/* Visual Architecture Schematic Image */}
                 <div className="rounded-2xl overflow-hidden border border-[#DBD6CF] relative group shadow-sm bg-slate-900">
                   <img 
-                    src="/images/master-architecture.jpg" 
+                    src="/images/master-architecture.webp" 
                     alt="Production AI System Architecture Blueprint"
                     className="w-full h-36 object-cover object-center group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
@@ -170,8 +156,8 @@ export default function AiPlatformPillars({ onOpenContact }) {
                 </div>
 
                 <div className="p-3 rounded-xl bg-white border border-[#DBD6CF]">
-                  <span className="text-[10px] text-slate-500 block uppercase">Target Accuracy SLA</span>
-                  <p className="text-emerald-700 font-bold mt-0.5">99.4%+ With Human Oversight</p>
+                  <span className="text-[10px] text-slate-500 block uppercase">Quality Control</span>
+                  <p className="text-emerald-700 font-bold mt-0.5">Human review on low-confidence output</p>
                 </div>
               </div>
 

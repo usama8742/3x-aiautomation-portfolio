@@ -1,18 +1,8 @@
 import React from 'react';
+import { Building2, Stethoscope, Scale, GraduationCap, Megaphone, Factory, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { INDUSTRIES } from '../data/portfolioData';
 import TiltCard from './TiltCard';
-import { 
-  Building2, 
-  Stethoscope, 
-  Scale, 
-  GraduationCap, 
-  Megaphone, 
-  Factory,
-  Sparkles,
-  ArrowRight,
-  CheckCircle2
-} from 'lucide-react';
-
 const ICON_MAP = {
   Building2: Building2,
   Stethoscope: Stethoscope,
@@ -104,14 +94,32 @@ export default function Industries() {
                     </div>
                   </div>
 
-                  {/* Card Bottom Strip */}
+                  {/* Card Bottom: link to the industry page when one exists */}
                   <div className="px-6 pb-6 pt-2">
+                    {ind.slug && (
+                      <Link
+                        to={`/industries/${ind.slug}`}
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#191919] hover:text-[#FE330A] transition-colors mb-3"
+                      >
+                        <span>How we automate {ind.title}</span>
+                        <span aria-hidden="true">→</span>
+                      </Link>
+                    )}
                     <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-[#FE330A] dark:via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </div>
                 </div>
               </TiltCard>
             );
           })}
+        </div>
+
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-semibold">
+          <Link to="/industries/restaurants" className="text-[#191919] hover:text-[#FE330A] transition-colors">
+            Also restaurants &amp; hospitality →
+          </Link>
+          <Link to="/industries" className="text-[#FE330A] hover:underline">
+            See every industry we serve →
+          </Link>
         </div>
 
       </div>

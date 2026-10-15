@@ -1,24 +1,40 @@
 import React from 'react';
-import Logo from './Logo';
 import { Mail, ArrowUp } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import Logo from './Logo';
 import { GithubIcon, LinkedinIcon, InstagramIcon } from './SocialIcons';
-
 export default function Footer() {
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // Section anchors live on the home page; route links go anywhere.
   const navLinks = [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
     { label: 'Services', href: '#services' },
     { label: 'Projects', href: '#projects' },
+    { label: 'Academy', href: '/academy' },
+    { label: 'Knowledge Hub', href: '/knowledge-hub' },
+    { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: '#contact' },
   ];
 
   const handleNavClick = (e, href) => {
     e.preventDefault();
-    const target = document.querySelector(href);
+    if (!href.startsWith('#')) {
+      navigate(href);
+      return;
+    }
+    const id = href.slice(1);
+    if (pathname !== '/') {
+      navigate('/', { state: { scrollTo: id } });
+      return;
+    }
+    const target = document.getElementById(id);
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
     }
@@ -42,9 +58,9 @@ export default function Footer() {
             </a>
 
             <div className="pt-2">
-              <h4 className="text-base font-bold text-white">Usama Younas</h4>
+              <h4 className="text-base font-bold text-white">Usama Younas &amp; Haseeb Tariq</h4>
               <p className="text-xs text-[#FE330A] font-semibold mt-0.5">
-                AI Engineer · Automation Specialist
+                AI &amp; Automation Engineers · 3X AI Automation
               </p>
               <p className="text-sm text-slate-400 mt-2 max-w-sm leading-relaxed font-normal">
                 "Building intelligent systems for modern businesses."
@@ -129,7 +145,7 @@ export default function Footer() {
 
         {/* Bottom Bar: Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© 2026 Usama Younas. All rights reserved.</p>
+          <p>© 2026 3X AI Automation. All rights reserved.</p>
           <p className="flex items-center gap-2 font-mono text-[11px]">
             <span>3X AI Automation</span>
             <span>·</span>

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { animate, scroll } from 'motion';
-
 export default function ScrollProgress() {
   const progressBarRef = useRef(null);
 
@@ -21,7 +20,7 @@ export default function ScrollProgress() {
     <div className="fixed top-0 left-0 right-0 h-[2.5px] z-50 pointer-events-none origin-left">
       <div 
         ref={progressBarRef}
-        className="h-full w-full bg-gradient-to-r from-[#0878FE] via-[#06B6D4] to-[#8B5CF6] shadow-[0_0_10px_rgba(6,182,212,0.8)] origin-left"
+        className="h-full w-full bg-gradient-to-r from-[#FE330A] via-[#FF7A4D] to-[#D62705] shadow-[0_0_10px_rgba(254,51,10,0.5)] origin-left"
         style={{ transform: 'scaleX(0)' }}
       />
     </div>

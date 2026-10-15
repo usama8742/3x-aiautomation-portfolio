@@ -8,6 +8,18 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://usama-ai-portfolio.vercel.app/academy</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://usama-ai-portfolio.vercel.app/knowledge-hub</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://usama-ai-portfolio.vercel.app/services</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -34,55 +46,55 @@
 
   <!-- Service Pages -->
   <url>
-    <loc>https://usama-ai-portfolio.vercel.app/ai-automation</loc>
+    <loc>https://usama-ai-portfolio.vercel.app/services/ai-automation</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://usama-ai-portfolio.vercel.app/ai-agents</loc>
+    <loc>https://usama-ai-portfolio.vercel.app/services/ai-agents</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://usama-ai-portfolio.vercel.app/n8n-automation</loc>
+    <loc>https://usama-ai-portfolio.vercel.app/services/n8n-automation</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://usama-ai-portfolio.vercel.app/ai-chatbots</loc>
+    <loc>https://usama-ai-portfolio.vercel.app/services/ai-chatbots</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://usama-ai-portfolio.vercel.app/ai-voice-agents</loc>
+    <loc>https://usama-ai-portfolio.vercel.app/services/ai-voice-agents</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://usama-ai-portfolio.vercel.app/crm-automation</loc>
+    <loc>https://usama-ai-portfolio.vercel.app/services/crm-automation</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://usama-ai-portfolio.vercel.app/lead-generation</loc>
+    <loc>https://usama-ai-portfolio.vercel.app/services/lead-generation</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://usama-ai-portfolio.vercel.app/api-integrations</loc>
+    <loc>https://usama-ai-portfolio.vercel.app/services/api-integrations</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://usama-ai-portfolio.vercel.app/web-design</loc>
+    <loc>https://usama-ai-portfolio.vercel.app/services/web-design</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>

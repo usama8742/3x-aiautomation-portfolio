@@ -1,8 +1,8 @@
 import React from 'react';
-import { Bot, Sliders, Network, Layers, Sparkles, CheckCircle2, ShieldCheck, Cpu, Code2, Zap } from 'lucide-react';
-import TiltCard from './TiltCard';
+import { Bot, Sliders, Network, Layers, Sparkles, CheckCircle2, Zap } from 'lucide-react';
 import CountUp from './CountUp';
-
+import { LogoMark } from './Logo';
+import TiltCard from './TiltCard';
 const ABOUT_CARDS = [
   {
     title: "AI & Automation",
@@ -43,10 +43,10 @@ export default function About() {
         <div className="max-w-3xl mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EFEAE3] dark:bg-[#FE330A]/15 border border-[#DBD6CF] dark:border-[#FE330A]/30 text-[#FE330A] dark:text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>About Usama Younas</span>
+            <span>About 3X AI Automation</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#191919] dark:text-white tracking-tight leading-tight">
-            I Turn Business Problems Into <span className="text-[#FE330A] dark:text-cyan-400">Intelligent Systems.</span>
+            We Turn Business Problems Into <span className="text-[#FE330A] dark:text-cyan-400">Intelligent Systems.</span>
           </h2>
         </div>
 
@@ -56,16 +56,16 @@ export default function About() {
           {/* Main Narrative Text (7 cols) */}
           <div className="lg:col-span-7 space-y-5 text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed font-normal">
             <p>
-              I’m <strong className="font-semibold text-[#191919] dark:text-white">Usama Younas</strong>, an AI Engineer focused on building practical AI and automation solutions for modern businesses.
+              <strong className="font-semibold text-[#191919] dark:text-white">3X AI Automation</strong> is a two-engineer AI automation studio. We build practical AI and automation systems for businesses that want results, not demos.
             </p>
             <p>
-              I work across AI agents, workflow automation, backend development, APIs, CRM systems, chatbots, voice agents, and AI-powered applications.
+              We work across AI agents, workflow automation, backend development, APIs, CRM systems, chatbots, voice agents, and AI-powered applications.
             </p>
             <p>
-              My approach is simple: understand the business process, identify what can be automated, and build a reliable system that connects the right tools together.
+              Our approach is simple: understand the business process, identify what can be automated, and build a reliable system that connects the right tools together.
             </p>
             <p className="text-slate-600 dark:text-slate-400">
-              Whether it’s qualifying leads, responding to customers, managing appointments, updating a CRM, or connecting multiple platforms, I build systems designed around real business needs.
+              Whether it’s qualifying leads, responding to customers, managing appointments, updating a CRM, or connecting multiple platforms, we build systems designed around real business needs, and the engineers who scope the work are the ones who ship it.
             </p>
 
             <div className="pt-3 flex flex-wrap gap-2 text-xs font-semibold">
@@ -90,36 +90,31 @@ export default function About() {
 
                 <div className="flex items-center gap-4 pb-5 border-b border-[#DBD6CF] dark:border-slate-800">
                   <div className="relative shrink-0">
-                    <img 
-                      src="/profile-photo.png" 
-                      alt="Usama Younas - AI Engineer" 
-                      className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover border-2 border-[#FE330A] shadow-md"
-                      onError={(e) => {
-                        e.target.style.display = 'none';
-                      }}
-                    />
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-[#EFEAE3] dark:bg-slate-900 border border-[#DBD6CF] dark:border-slate-800 flex items-center justify-center shadow-md">
+                      <LogoMark className="w-14 h-14 sm:w-16 sm:h-16" />
+                    </div>
                     <span className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-white dark:border-slate-900 rounded-full animate-pulse"></span>
                   </div>
                   <div>
                     <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-[#EFEAE3] dark:bg-[#FE330A]/20 text-[#FE330A] dark:text-cyan-400 text-[10px] font-mono font-bold mb-1">
                       <Zap className="w-3 h-3 fill-current" />
-                      ACTIVE ENGINEER
+                      TAKING NEW PROJECTS
                     </div>
-                    <h3 className="text-xl font-bold text-[#191919] dark:text-white">Usama Younas</h3>
-                    <p className="text-xs font-semibold text-[#FE330A] dark:text-cyan-400">AI Engineer · 3X AI Automation</p>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Available for Remote & Contract Systems</p>
+                    <h3 className="text-xl font-bold text-[#191919] dark:text-white">3X AI Automation</h3>
+                    <p className="text-xs font-semibold text-[#FE330A] dark:text-cyan-400">AI Automation Studio · Usama Younas &amp; Haseeb Tariq</p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Remote team · Clients worldwide</p>
                   </div>
                 </div>
 
                 {/* Engineering Blueprint Snippet */}
                 <div className="mt-4 bg-[#EFEAE3] dark:bg-slate-950/80 rounded-2xl p-4 font-mono text-xs space-y-2.5 border border-[#DBD6CF]/70 dark:border-slate-800/80">
                   <div className="flex justify-between items-center pb-1.5 border-b border-[#DBD6CF]/40 dark:border-slate-800">
-                    <span className="text-slate-400">role</span>
-                    <span className="text-[#FE330A] dark:text-cyan-400 font-bold">"AI Engineer"</span>
+                    <span className="text-slate-400">team</span>
+                    <span className="text-[#FE330A] dark:text-cyan-400 font-bold">"2 AI Engineers"</span>
                   </div>
                   <div className="flex justify-between items-center pb-1.5 border-b border-[#DBD6CF]/40 dark:border-slate-800">
-                    <span className="text-slate-400">brand</span>
-                    <span className="text-[#191919] dark:text-slate-200 font-bold">"3X AI Automation"</span>
+                    <span className="text-slate-400">model</span>
+                    <span className="text-[#191919] dark:text-slate-200 font-bold">"Scoped & built in-house"</span>
                   </div>
                   <div className="flex justify-between items-center pb-1.5 border-b border-[#DBD6CF]/40 dark:border-slate-800">
                     <span className="text-slate-400">specialization</span>
@@ -127,7 +122,7 @@ export default function About() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-slate-400">core_stack</span>
-                    <span className="text-[#FE330A] dark:text-cyan-400 font-semibold">"n8n · Python · React"</span>
+                    <span className="text-[#FE330A] dark:text-cyan-400 font-semibold">"n8n · Python · TypeScript"</span>
                   </div>
                 </div>
 
@@ -138,8 +133,8 @@ export default function About() {
                     <span className="text-[10px] text-slate-600 dark:text-slate-400">Custom Built</span>
                   </div>
                   <div className="bg-[#EFEAE3] dark:bg-slate-900 border border-[#DBD6CF] dark:border-slate-800 p-2 rounded-xl text-[#191919] dark:text-slate-200">
-                    <CountUp end={45} prefix="< " suffix="s" className="block font-bold text-sm" />
-                    <span className="text-[10px] text-slate-600 dark:text-slate-400">Avg Lead Processing</span>
+                    <CountUp end={24} suffix="/7" className="block font-bold text-sm" />
+                    <span className="text-[10px] text-slate-600 dark:text-slate-400">Agents Never Sleep</span>
                   </div>
                 </div>
               </div>
